@@ -23,7 +23,7 @@ def find_line(filename, word_list_str):
     if "" in word_list:
         return "Please enter valid search words"
 		
-    # each line produces integer count of how many words from user input occur in it
+    # each line produces integer count of how many words from user input occur in it, this count is added to frequency list 'freq_list'
     for line in line_list:
         count = 0
         for word in word_list:
@@ -31,7 +31,7 @@ def find_line(filename, word_list_str):
                 count += 1
         freq_list.append(count)
    
-    # index of line with most words from user input found via max, used to return that line from the copy of the poem's text which still has punctuation symbols
+    # index of line with most words from user input found via max function, used to return corresponding line from the copy of the poem's text which still has punctuation symbols
     max_freq = max(freq_list)
     max_idx = freq_list.index(max_freq)
     return line_list_copy[max_idx]      

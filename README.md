@@ -27,4 +27,4 @@ necessary to elevate to root privileges to do some of them:
 (8) Navigate to the new folder called Emsi_Interview_Project, you are now ready to run the program!
 
 ## Usage
-After finishing the installation process described above, the user should now be in the folder called Emsi_Interview_Project
+After finishing the installation process described above, the user should now be in the folder called Emsi_Interview_Project and

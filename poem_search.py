@@ -37,7 +37,7 @@ def find_line(filename, word_list_str):
 
 if __name__ == "__main__":
     poem_file = sys.argv[1]
-    search_words = input()
+    search_words = input("Enter words to search: ")
     line_ = find_line(poem_file, search_words)
     for el in line_[0:3]:
         print(el)  

@@ -27,4 +27,10 @@ necessary to elevate to root privileges to do some of them:
 8. Navigate to the new folder called Emsi_Interview_Project, you are now ready to run the program!
 
 ## Usage
-After finishing the installation process described above, the user should now be in the folder called Emsi_Interview_Project and
+After finishing the installation process described above, the user should now be in the folder called Emsi_Interview_Project
+
+1. Select a poem to search, there should already be one named "lepanto.txt" in the current folder. Add another poem to the current folder if needed
+2. Run the following command:   python poem_search.py lepanto.txt                [ or the textfile name of some other poem ]
+3. In the following prompt, enter a list of words surrounded by double quotes that are contained in a line from the poem [ example: type "Raymond gate" into prompt ]
+4. After pressing ENTER, the user should now see the line from the poem that best matches the search words provided!
+

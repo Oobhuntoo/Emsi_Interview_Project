@@ -21,7 +21,7 @@ def find_line(filename, word_list_str):
     line_list = list(map(clean_list , line_list))
     # check to see if user input is empty or just contained punctuation symbols
     if "" in word_list:
-        return "Please enter valid search words"
+        return [ "Please enter valid search words" ]
 		
     # each line produces integer count of how many words from user input occur in it, this count is added to frequency list 'freq_list'
     for line in line_list:

@@ -46,6 +46,7 @@ Now, what happens if a user enters two words from line 12 and two words from lin
 Should the program return both lines 12 and 45, or should it return just one of them? The goal of this project is to help the customer
 identify the line they are remembering from the poem, so I believe it is more helpful to return multiple lines if the user remembered 
 the same number of words from each. The program does this by returning a list of lines which contain the same number of words in the user input.
+
 This list is formed via Python's conditional list comprehension feature to identify the lines whose frequency count is equal to the max frequency
 count of words from the user input. Now, it is possible that the user enters search words which are too broad, such as "and" "the" etc. In this case,
 the program will find many lines which match those search words. Thus, the program prints the first 3 lines that match the given words,
@@ -62,6 +63,7 @@ and is not just a substring of another word. Thus, the program could not detect 
 regex library to go through each word in the user input and each word of each line of the poem and remove punctuation symbols. This guarantees that only
 alphanumeric characters are being compared during the search process.
 Here is the documentation for the regex library: https://docs.python.org/3/library/re.html
+
 In the source code, on Line 10, punctuation symbols are identified and replaced with the empty string using regular expression syntax [^\w\s]. the '^' characters
 means 'exclude' and the '\s' character means any UNICODE char usually in strings i.e. alphanumeric, and the '\w' means whitespace characters.
 Thus, this command detects any non-alphanumeric character i.e. punctuation and replaces it with the empty string. That is how punctuation symbols are removed

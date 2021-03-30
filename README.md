@@ -26,7 +26,7 @@ necessary to elevate to root privileges to do some of them:
 7. To download the project from Github, run this command: git clone https://github.com/Oobhuntoo/Emsi_Interview_Project.git
 8. Navigate to the new folder called Emsi_Interview_Project, you are now ready to run the program!
 
-## Usage
+## Instructions
 After finishing the installation process described above, the user should now be in the folder called Emsi_Interview_Project
 
 1. Select a poem to search, there should already be one named "lepanto.txt" in the current folder. Add another poem to the current folder if needed

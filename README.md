@@ -64,7 +64,7 @@ regex library to go through each word in the user input and each word of each li
 alphanumeric characters are being compared during the search process.
 Here is the documentation for the regex library: https://docs.python.org/3/library/re.html
 
-In the source code, on Line 10, punctuation symbols are identified and replaced with the empty string using regular expression syntax [^\w\s]. the '^' characters
+In the source code, on Line 10, punctuation symbols are identified and replaced with the empty string using regular expression syntax [^\w\s]. The '^' characters
 means 'exclude' and the '\s' character means any UNICODE char usually in strings i.e. alphanumeric, and the '\w' means whitespace characters.
 Thus, this command detects any non-alphanumeric character i.e. punctuation and replaces it with the empty string. That is how punctuation symbols are removed
 from all words in the user input and poem file. However, before these symbols are removed, a copy of the poem is made and the corresponding lines

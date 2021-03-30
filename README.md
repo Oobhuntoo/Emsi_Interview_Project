@@ -48,13 +48,15 @@ identify the line they are remembering from the poem, so I believe it is more he
 the same number of words from each. The program does this by returning a list of lines which contain the same number of words in the user input.
 This list is formed via Python's conditional list comprehension feature to identify the lines whose frequency count is equal to the max frequency
 count of words from the user input. Now, it is possible that the user enters search words which are too broad, such as "and" "the" etc. In this case,
-the program will find many lines which match those search words. Thus, the program returns the first 3 lines that match the given words,
-since more than 1 line might be helpful, but many lines wouldn't be that helpful.
+the program will find many lines which match those search words. Thus, the program prints the first 3 lines that match the given words,
+since more than 1 line might be helpful, but many lines wouldn't be that helpful. It uses Pythonic slicing syntax to do this i.e. [:] 
+which allows the list to be sliced past its length. Thus, there won't be an index error if there are fewer than 3 lines, and if there are more
+than 3 lines, only the first 3 will be printed.
 Also, in the case where the user asks to find words which don't occur in the poem, each line will have a frequency count of 0, and thus each line
 will have the "maximum" count of 0. Thus, because of the previous feature, the first 3 lines of the poem will be returned.
 
 Another potential issue that could arise is if the user enters a word such as "house", but in the poem, it is represented adjacent to a punctuation
-symbol, such as "house!" The lines of the poem are broken into lists of words, to ensure that a given search word actually occurs in the line,
+symbol, such as "house!". The lines of the poem are broken into lists of words, to ensure that a given search word actually occurs in the line,
 and is not just a substring of another word. Thus, the program could not detect the word "house" in the list of words of a line, if it is written as
 "house!" in the poem, since the words of the line are delimited by space via Python's split function. To solve this problem, I chose to use the Python
 regex library to go through each word in the user input and each word of each line of the poem and remove punctuation symbols. This guarantees that only
@@ -63,5 +65,5 @@ Here is the documentation for the regex library: https://docs.python.org/3/libra
 In the source code, on Line 10, punctuation symbols are identified and replaced with the empty string using regular expression syntax [^\w\s]. the '^' characters
 means 'exclude' and the '\s' character means any UNICODE char usually in strings i.e. alphanumeric, and the '\w' means whitespace characters.
 Thus, this command detects any non-alphanumeric character i.e. punctuation and replaces it with the empty string. That is how punctuation symbols are removed
-from all words in the user input and poem file. However, before these symbols are removed, a copy of the poem is made and it the corresponding lines
+from all words in the user input and poem file. However, before these symbols are removed, a copy of the poem is made and the corresponding lines
 from this copy are what actually get returned, so that the user can see the original punctuation from the poem.

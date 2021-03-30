@@ -1,6 +1,6 @@
 # Emsi_Interview_Project
 
-## Overview
+## Introduction
 This project consists of a Python program that reads in a poem from a text file,
 and then prompts the user to enter words that are found in one of the lines 
 of the poem. The program performs a search and prints the line that best matches
@@ -33,4 +33,7 @@ After finishing the installation process described above, the user should now be
 2. Run the following command:   python poem_search.py lepanto.txt                [ or the textfile name of some other poem ]
 3. In the following prompt, enter a list of words surrounded by double quotes that are contained in a line from the poem [ example: type "Raymond gate" into prompt ]
 4. After pressing ENTER, the user should now see the line from the poem that best matches the search words provided!
+
+## Design Ideas
+
 

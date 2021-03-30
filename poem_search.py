@@ -33,11 +33,12 @@ def find_line(filename, word_list_str):
    
     # index of line with most words from user input found via max function, used to return corresponding line from the copy of the poem's text which still has punctuation symbols
     max_freq = max(freq_list)
-    max_idx = freq_list.index(max_freq)
-    return line_list_copy[max_idx]      
+    #max_idx = freq_list.index(max_freq)
+    return [ line_list_copy[i] for i in range(0, len(freq_list)) if freq_list[i] == max_freq ]
 
 if __name__ == "__main__":
     poem_file = sys.argv[1]
     search_words = input()
     line_ = find_line(poem_file, search_words)
-    print(line_)  
+	for el in line_:
+        print(el)  

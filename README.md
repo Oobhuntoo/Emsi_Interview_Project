@@ -32,7 +32,7 @@ After finishing the installation process described above, the user should now be
 1. Select a poem to search, there should already be one named "lepanto.txt" in the current folder. Add another poem to the current folder if needed
 2. Run the following command:   python poem_search.py lepanto.txt                [ or the textfile name of some other poem ]
 3. In the following prompt, enter a list of words surrounded by double quotes that are contained in a line from the poem [ example: type "Raymond gate" into prompt ]
-4. After pressing ENTER, the user should now see the line from the poem that best matches the search words provided!
+4. Do not put whitespace between the quote characters and the search words. After pressing ENTER, the user should now see the line from the poem that best matches the search words provided!
 
 ## Design Ideas
 The main idea behind this project is that a user enters one or more words supposedly from the given poem, and then the program returns
@@ -47,7 +47,10 @@ Should the program return both lines 12 and 45, or should it return just one of 
 identify the line they are remembering from the poem, so I believe it is more helpful to return multiple lines if the user remembered 
 the same number of words from each. The program does this by returning a list of lines which contain the same number of words in the user input.
 This list is formed via Python's conditional list comprehension feature to identify the lines whose frequency count is equal to the max frequency
-count of words from the user input.
+count of words from the user input. Now, it is possible that the user enters search words which are too broad, such as "and" "the" etc. In this case,
+the program will find many lines which match those search words. Thus, the program returns the first 3 lines that match the given words.
+Also, in the case where the user asks to find words which don't occur in the poem, each line will have a frequency count of 0, and thus each line
+will have the "maximum" count of 0. Thus, because of the previous feature, the first 3 lines of the poem will be returned.
 
 Another potential issue that could arise is if the user enters a word such as "house", but in the poem, it is represented adjacent to a punctuation
 symbol, such as "house!" The lines of the poem are broken into lists of words, to ensure that a given search word actually occurs in the line,
